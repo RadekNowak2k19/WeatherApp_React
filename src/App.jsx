@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Components
+import { Header } from "./components/Header";
+import { MainContainer } from "./components/MainContainer";
+import { Footer } from "./components/Footer";
 
+// const API_KEY = "f19cccf1d9b5d6373110845d2578547c";
+// const URL = `https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=${API_KEY}`;
 function App() {
-  const [count, setCount] = useState(0)
+	// useEffect(function () {
+	// 	async function weatherFetch() {
+	// 		const res = await fetch(URL);
+	// 		const data = await res.json();
+	// 		console.log(data.weather[0].icon);
+	// 	}
+	// 	weatherFetch();
+	// }, []);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<>
+			<Header />
+			<MainContainer></MainContainer>
+			<Footer />
+		</>
+	);
 }
 
-export default App
+export default App;
