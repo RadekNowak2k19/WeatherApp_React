@@ -1,5 +1,5 @@
 $bgColor: #373f51;
-$headerColor: #38a3a5;
+$headerColor: #fee440;
 $color: #a9bcd0;
 $text: #1b1b1e;
 $footer: #e43f6f;
@@ -15,6 +15,7 @@ $latoFont: "Lato", sans-serif;
 }
 body {
 	font-family: $latoFont;
+	background-color: $bgColor;
 }
 img,
 picture,
@@ -61,4 +62,49 @@ ul {
 }
 /* 2xl */
 @media (min-width: 1536px) {
+}
+.logo {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	p {
+		display: none;
+		font-weight: bold;
+	}
+}
+.search {
+	display: flex;
+	gap: 10px;
+	.input {
+		border: none;
+		border-radius: 8px;
+	}
+	button {
+		border: none;
+		border-radius: 50vh;
+		cursor: pointer;
+		padding: 7px;
+	}
+	.input:focus {
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+			rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	}
+}
+.time {
+	width: 70px;
+}
+// * sm */
+@media (min-width: 640px) {
+	.logo p {
+		display: block;
+	}
+}
+/* md */
+@media (min-width: 768px) {
+	.search .input {
+		width: 250px;
+	}
+	.logo p {
+		font-size: 1.25rem;
+	}
 }
