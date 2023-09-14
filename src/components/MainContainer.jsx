@@ -1,4 +1,4 @@
 import styles from "./MainContainer.module.scss";
-export const MainContainer = () => {
-	return <main className={styles.main}>MainContainer</main>;
+export const MainContainer = ({ children }) => {
+	return <main className={styles.main}>{children}</main>;
 };
