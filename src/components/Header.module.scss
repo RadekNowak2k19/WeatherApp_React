@@ -1,0 +1,8 @@
+@use "../index.scss" as *;
+.header {
+	align-items: center;
+	background-color: $headerColor;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+}
