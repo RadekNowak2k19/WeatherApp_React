@@ -1,3 +1,4 @@
+import styles from "./WeatherType.module.scss";
 export const WeatherType = () => {
-	return <div>WeatherType</div>;
+	return <div className={styles.WeatherType}>WeatherType</div>;
 };
