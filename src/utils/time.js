@@ -5,5 +5,5 @@ const options = {
 	day: "numeric",
 };
 const now = new Date();
-const currentDate = new Intl.DateTimeFormat("Pl", options).format(now);
+const currentDate = new Intl.DateTimeFormat("PL", options).format(now);
 export { currentDate };
