@@ -10,7 +10,7 @@ import { Error } from "./components/Error";
 // OpenWeatherMap
 const API_KEY = "f19cccf1d9b5d6373110845d2578547c";
 const UNITS = "metric";
-const URL = `https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=${API_KEY}&units=${UNITS}`;
+const URL = `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${API_KEY}&units=${UNITS}`;
 // const FORECAST = `https://api.openweathermap.org/data/2.5/forecast?q=Warsaw&appid=f19cccf1d9b5d6373110845d2578547c&units=${UNITS}`;÷
 
 const initialState = {
