@@ -1,10 +1,11 @@
 $bgColor: #373f51;
 $headerColor: #fee440;
 $color: #a9bcd0;
-$text: #1b1b1e;
+$textPrimary: #1b1b1e;
 $footerColor: #e43f6f;
 $errorColor: hsl(0, 80%, 60%);
 $latoFont: "Lato", sans-serif;
+$textSecondary: #22577a;
 $boxShadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
 	rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
 	rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
@@ -18,8 +19,9 @@ $boxShadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
 	box-sizing: border-box;
 }
 body {
-	font-family: $latoFont;
 	background-color: $bgColor;
+	color: $textPrimary;
+	font-family: $latoFont;
 }
 img,
 picture,
