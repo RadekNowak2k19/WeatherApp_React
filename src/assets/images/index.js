@@ -1,3 +1,4 @@
 import logoIcon from "./logo.png";
 import searchIcon from "./search.svg";
-export { logoIcon, searchIcon };
+import errorIcon from "./error.svg";
+export { logoIcon, searchIcon, errorIcon };

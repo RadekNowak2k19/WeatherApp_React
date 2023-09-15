@@ -5,7 +5,7 @@ import { Temperature } from "./Temperature";
 import { Weather } from "./Weather";
 import styles from "./WeatherApp.module.scss";
 import { WeatherType } from "./WeatherType";
-export const WeatherApp = ({ weather }) => {
+export const WeatherApp = ({ currentWeather }) => {
 	return (
 		<div className={styles.weatherApp}>
 			<Location />
