@@ -1,9 +1,6 @@
 import styles from "./WeatherType.module.scss";
 export const WeatherType = ({ weather }) => {
 	const { main, description, icon } = weather[0];
-	console.log(main);
-	console.log(description);
-	console.log(icon);
 
 	return (
 		<div className={styles.WeatherType}>
