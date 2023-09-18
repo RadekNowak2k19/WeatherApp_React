@@ -4,8 +4,6 @@ export const MoreInfo = ({ main, sys, wind }) => {
 	const { speed } = wind;
 	const { pressure } = main;
 	const { sunrise, sunset } = sys;
-	console.log(speed, pressure);
-	console.log(sunrise, sunset);
 
 	const infoArr = [
 		{

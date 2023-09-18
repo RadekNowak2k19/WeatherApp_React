@@ -1,7 +1,6 @@
 import { InfoElement } from "./InfoElement";
 import styles from "./Temperature.module.scss";
 export const Temperature = ({ main }) => {
-	console.log(main);
 	const { temp_max, temp_min, feels_like, temp } = main;
 	const tempArr = [
 		{
