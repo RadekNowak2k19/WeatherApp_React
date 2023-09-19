@@ -29,7 +29,7 @@ export const MoreInfo = ({ main, sys, wind }) => {
 	];
 
 	return (
-		<div className={styles.moreInfo}>
+		<div className={`${styles.moreInfo} weatherComponent`}>
 			{infoArr.map(info => (
 				<InfoElement key={info.id} title={info.title} info={info.info} />
 			))}

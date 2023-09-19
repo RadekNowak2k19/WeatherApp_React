@@ -1,0 +1,11 @@
+.weather {
+	display: grid;
+	gap: 1rem;
+}
+// Responsive
+/* md */
+@media (min-width: 768px) {
+	.weather {
+		grid-area: 1 / 2 / 3 / 3;
+	}
+}

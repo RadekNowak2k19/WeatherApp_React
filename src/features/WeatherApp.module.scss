@@ -1,4 +1,34 @@
 @use "../index.scss" as *;
 .weatherApp {
-	border: 1px solid red;
+	margin: 2rem auto;
+	padding: 2rem;
+	display: grid;
+	gap: 2rem;
+}
+// Responsive
+/* md */
+@media (min-width: 768px) {
+	.weatherApp {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		width: 700px;
+	}
+}
+/* lg */
+@media (min-width: 1024px) {
+	.weatherApp {
+		width: 800px;
+	}
+}
+/* xl */
+@media (min-width: 1280px) {
+	.weatherApp {
+		width: 900px;
+	}
+}
+/* 2xl */
+@media (min-width: 1536px) {
+	.weatherApp {
+		width: 1000px;
+	}
 }
