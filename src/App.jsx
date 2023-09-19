@@ -66,8 +66,6 @@ function App() {
 	// cod, name, id, wind: {speed, deg}, timezone, main: {temp, temp_max, temp_min, pressure, feels_like}, sys: {country, sunrise, sunset}, weather: [{description, mian, id , icon}]
 	const { name, sys, main, weather, wind } = currentWeather;
 	const forecastArr = forecast.list;
-	console.log(forecast);
-	console.log(currentWeather);
 
 	return (
 		<>

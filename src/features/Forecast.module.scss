@@ -1,0 +1,10 @@
+// Responsive
+/* md */
+.forecast {
+	display: flex;
+}
+@media (min-width: 768px) {
+	.forecast {
+		grid-area: 3 / 1 / 4 / 3;
+	}
+}

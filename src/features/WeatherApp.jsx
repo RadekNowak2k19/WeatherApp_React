@@ -3,8 +3,8 @@ import { Location } from "./Location";
 import { MoreInfo } from "./MoreInfo";
 import { Temperature } from "./Temperature";
 import { Weather } from "./Weather";
-import styles from "./WeatherApp.module.scss";
 import { WeatherType } from "./WeatherType";
+import styles from "./WeatherApp.module.scss";
 export const WeatherApp = ({ name, sys, main, weather, wind, forecastArr }) => {
 	return (
 		<div className={styles.weatherApp}>

@@ -2,7 +2,7 @@ import { currentDate } from "../utils/time";
 import styles from "./Location.module.scss";
 export const Location = ({ name, sys }) => {
 	return (
-		<div className={styles.location}>
+		<div className={`${styles.location} weatherComponent`}>
 			<div className={styles.currentTime}>
 				<p className={styles.currentTime}>{currentDate}</p>
 			</div>

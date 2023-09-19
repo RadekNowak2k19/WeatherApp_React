@@ -1,3 +1,4 @@
+import styles from "./Weather.module.scss";
 export const Weather = ({ children }) => {
-	return <div>{children}</div>;
+	return <div className={`${styles.weather} weatherComponent`}>{children}</div>;
 };
