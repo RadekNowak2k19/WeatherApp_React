@@ -2,6 +2,9 @@
 /* md */
 .forecast {
 	display: flex;
+	width: 450px;
+	overflow-x: scroll;
+	gap: 2rem;
 }
 @media (min-width: 768px) {
 	.forecast {

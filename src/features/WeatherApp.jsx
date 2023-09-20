@@ -14,7 +14,7 @@ export const WeatherApp = ({ name, sys, main, weather, wind, forecastArr }) => {
 				<WeatherType weather={weather} />
 			</Weather>
 			<MoreInfo main={main} sys={sys} wind={wind} />
-			{/* <Forecast forecastArr={forecastArr} /> */}
+			<Forecast forecastArr={forecastArr} />
 		</div>
 	);
 };

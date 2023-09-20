@@ -1,0 +1,20 @@
+@use "../index.scss" as *;
+.forecastElement {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 8px;
+	.temperature {
+		color: $textSecondary;
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+}
+// RESPONSIVE
+/* md */
+@media (min-width: 768px) {
+	.forecastElement {
+		padding: 0 12px;
+	}
+}
