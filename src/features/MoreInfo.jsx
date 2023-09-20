@@ -1,3 +1,4 @@
+import { convertTime } from "../utils/convertTime";
 import { InfoElement } from "./InfoElement";
 import styles from "./MoreInfo.module.scss";
 export const MoreInfo = ({ main, sys, wind }) => {
@@ -8,23 +9,23 @@ export const MoreInfo = ({ main, sys, wind }) => {
 	const infoArr = [
 		{
 			id: 0,
-			title: "Sunset",
-			info: sunset,
+			title: "Sunrise",
+			info: convertTime(sunrise),
 		},
 		{
 			id: 1,
-			title: "Sunrise",
-			info: sunrise,
+			title: "Sunset",
+			info: convertTime(sunset),
 		},
 		{
 			id: 2,
 			title: "Pressure",
-			info: pressure,
+			info: `${pressure} mb`,
 		},
 		{
 			id: 3,
 			title: "Wind speed",
-			info: speed,
+			info: `${speed} km/h`,
 		},
 	];
 
