@@ -1,4 +1,52 @@
 @use "../index.scss" as *;
 .moreInfo {
 	border-radius: 12px;
+	display: grid;
+	gap: 0.5rem;
+	div {
+		display: flex;
+		justify-content: space-between;
+		span:nth-child(2) {
+			color: $textSecondary;
+			font-size: 1.15rem;
+			font-weight: bold;
+		}
+	}
+}
+// RESPONSIVE
+// * xs */
+@media (min-width: 475px) {
+}
+/* sm */
+@media (min-width: 640px) {
+}
+/* md */
+@media (min-width: 768px) {
+	.moreInfo {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		div {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+/* lg */
+@media (min-width: 1024px) {
+}
+/* xl */
+@media (min-width: 1280px) {
+	.moreInfo div {
+		flex-direction: row;
+		gap: 0.2rem;
+		justify-content: center;
+	}
+}
+/* 2xl */
+@media (min-width: 1536px) {
+	.moreInfo div {
+		flex-direction: row;
+		gap: 0.5rem;
+		justify-content: center;
+	}
 }

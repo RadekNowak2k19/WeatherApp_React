@@ -1,4 +1,40 @@
 @use "../index.scss" as *;
 .temperature {
 	border-radius: 12px;
+	.currentTemp {
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+	.allDayTemp {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.5rem;
+		div {
+			text-align: center;
+			span:nth-child(2) {
+				color: $textSecondary;
+				font-size: 1.15rem;
+				font-weight: bold;
+			}
+		}
+	}
+}
+// RESPONSIVE
+// * xs */
+@media (min-width: 475px) {
+	.temperature .allDayTemp {
+		gap: 1rem;
+	}
+}
+/* sm */
+@media (min-width: 640px) {
+	.temperature {
+		.currentTemp {
+			font-size: 3.5rem;
+		}
+		.allDayTemp {
+			gap: 1.5rem;
+		}
+	}
 }

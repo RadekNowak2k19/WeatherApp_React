@@ -4,7 +4,7 @@ export const Location = ({ name, sys }) => {
 	return (
 		<div className={`${styles.location} weatherComponent`}>
 			<div className={styles.currentTime}>
-				<p className={styles.currentTime}>{currentDate}</p>
+				<p>{currentDate}</p>
 			</div>
 			<div className={styles.city}>
 				<p>

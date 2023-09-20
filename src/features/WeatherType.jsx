@@ -4,15 +4,15 @@ export const WeatherType = ({ weather }) => {
 
 	return (
 		<div className={styles.WeatherType}>
-			<div>
+			<div className={styles.image}>
 				<img
 					src={`../src/assets/images/${icon}.png`}
 					alt={`Weather icon. ${main}`}
 				/>
 			</div>
-			<div>
+			<div className={styles.text}>
 				<h6>{main}</h6>
-				<p>{description}</p>
+				<p>Description: {description}</p>
 			</div>
 		</div>
 	);
