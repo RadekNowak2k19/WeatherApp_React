@@ -21,6 +21,7 @@ const initialState = {
 	// loading, error, ready
 	status: "loading",
 	forecast: [],
+	errorMessage: "",
 };
 function reducer(state, action) {
 	switch (action.type) {
@@ -29,7 +30,7 @@ function reducer(state, action) {
 		case ACTIONS.DATA_FORECAST_RECIVED:
 			return { ...state, forecast: action.payload, status: "ready" };
 		case ACTIONS.DATA_FAILED:
-			return { ...state, status: "error" };
+			return { ...state, status: "error", errorMessage: action.payload };
 		case ACTIONS.SEARCH_CITY:
 			return { ...state, currentCity: action.payload, status: "ready" };
 		default:
@@ -40,7 +41,7 @@ function reducer(state, action) {
 const WeatherProvider = ({ children }) => {
 	const [city, setCity] = useState("");
 	const [state, dispatch] = useReducer(reducer, initialState);
-	const { currentWeather, status, forecast, currentCity } = state;
+	const { currentWeather, status, forecast, currentCity, errorMessage } = state;
 
 	// useEffect currentWeather
 	useEffect(
@@ -50,10 +51,11 @@ const WeatherProvider = ({ children }) => {
 					const res = await fetch(
 						`https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=${API_KEY}&units=${UNITS}`
 					);
+					if (res.status === 404) throw new Error("City not found");
 					const data = await res.json();
 					dispatch({ type: ACTIONS.DATA_RECIVED, payload: data });
 				} catch (err) {
-					dispatch({ type: ACTIONS.DATA_FAILED });
+					dispatch({ type: ACTIONS.DATA_FAILED, payload: err.message });
 				}
 			}
 			weatherFetch();
@@ -68,10 +70,11 @@ const WeatherProvider = ({ children }) => {
 					const res = await fetch(
 						`https://api.openweathermap.org/data/2.5/forecast?q=${currentCity}&appid=f19cccf1d9b5d6373110845d2578547c&units=${UNITS}`
 					);
+					if (res.status === 404) throw new Error("City not found");
 					const data = await res.json();
 					dispatch({ type: ACTIONS.DATA_FORECAST_RECIVED, payload: data });
 				} catch (err) {
-					dispatch({ type: ACTIONS.DATA_FAILED });
+					dispatch({ type: ACTIONS.DATA_FAILED, payload: err.message });
 				}
 			}
 			weatherFetch();
@@ -89,7 +92,7 @@ const WeatherProvider = ({ children }) => {
 				dispatch,
 				city,
 				setCity,
-				// --- MainContainer ---
+				// --- MainContainer ---x
 				currentWeatherMain: main,
 				currentWeatherWind: wind,
 				currentWeatherWeather: weather,
@@ -97,6 +100,7 @@ const WeatherProvider = ({ children }) => {
 				currentWeatherSys: sys,
 				forecastArr,
 				status,
+				errorMessage,
 			}}
 		>
 			{children}
