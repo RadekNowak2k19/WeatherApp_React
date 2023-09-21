@@ -3,13 +3,13 @@
 	border-radius: 12px;
 	.currentTemp {
 		font-size: 3rem;
-		text-align: center;
 		margin-bottom: 0.5rem;
+		text-align: center;
 	}
 	.allDayTemp {
 		display: flex;
-		justify-content: space-between;
 		gap: 0.5rem;
+		justify-content: space-between;
 		div {
 			text-align: center;
 			span:nth-child(2) {

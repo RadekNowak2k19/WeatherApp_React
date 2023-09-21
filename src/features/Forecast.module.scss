@@ -1,11 +1,11 @@
-// Responsive
 /* md */
 .forecast {
 	display: flex;
-	width: 450px;
-	overflow-x: scroll;
 	gap: 2rem;
+	overflow-x: scroll;
+	width: 450px;
 }
+// RESPONSIVE
 @media (min-width: 768px) {
 	.forecast {
 		grid-area: 3 / 1 / 4 / 3;

@@ -12,6 +12,7 @@ const UNITS = "metric";
 // const URL = `https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=${API_KEY}&units=${UNITS}`;
 // const FORECAST = `https://api.openweathermap.org/data/2.5/forecast?q=Warsaw&appid=f19cccf1d9b5d6373110845d2578547c&units=${UNITS}`;
 
+// useReducer
 const initialState = {
 	currentWeather: {},
 	currentCity: "Warsaw",
@@ -75,7 +76,6 @@ function App() {
 		[currentCity]
 	);
 
-	// cod, name, id, wind: {speed, deg}, timezone, main: {temp, temp_max, temp_min, pressure, feels_like}, sys: {country, sunrise, sunset}, weather: [{description, mian, id , icon}]
 	const { name, sys, main, weather, wind } = currentWeather;
 	const forecastArr = forecast.list;
 	return (

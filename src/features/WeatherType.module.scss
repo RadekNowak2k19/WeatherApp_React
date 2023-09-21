@@ -4,16 +4,16 @@
 	.image {
 		img {
 			margin: 0 auto;
-			width: 120px;
 			height: 120px;
+			width: 120px;
 		}
 	}
 	.text {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		gap: 0.5rem;
+		justify-content: center;
 		h6 {
 			color: $textSecondary;
 			font-size: 1.25rem;

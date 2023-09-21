@@ -1,8 +1,8 @@
 // https://codepen.io/jackrugile
 .loader {
 	background: transparent;
-	width: max-content;
 	height: max-content;
+	width: max-content;
 }
 
 .loaderInner {
@@ -85,7 +85,7 @@
 	width: 34px;
 	top: 35px;
 }
-
+// ANIMATION
 @keyframes spin {
 	0%,
 	15% {
