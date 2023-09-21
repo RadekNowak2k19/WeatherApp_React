@@ -1,11 +1,13 @@
 import { searchIcon } from "../assets/images/index";
 import { ACTIONS } from "../utils/actions";
-export const Search = ({ dispatch, city, setCity }) => {
+import { useWeather } from "../context/WeatherContext";
+export const Search = () => {
+	const { dispatch, city, setCity } = useWeather();
+
 	const handleSearchCity = () => {
 		if (!city) return;
 		dispatch({ type: ACTIONS.SEARCH_CITY, payload: city });
 	};
-	// dispatch({ type: "searchCity", payload: e.target.value }
 	return (
 		<form className="search" onSubmit={e => e.preventDefault()}>
 			<input

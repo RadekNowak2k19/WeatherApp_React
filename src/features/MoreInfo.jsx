@@ -1,10 +1,13 @@
 import { convertTime } from "../utils/convertTime";
 import { InfoElement } from "./InfoElement";
 import styles from "./MoreInfo.module.scss";
-export const MoreInfo = ({ main, sys, wind }) => {
-	const { speed } = wind;
-	const { pressure } = main;
-	const { sunrise, sunset } = sys;
+import { useWeather } from "../context/WeatherContext";
+export const MoreInfo = () => {
+	const { currentWeatherMain, currentWeatherSys, currentWeatherWind } =
+		useWeather();
+	const { pressure } = currentWeatherMain;
+	const { sunrise, sunset } = currentWeatherSys;
+	const { speed } = currentWeatherWind;
 
 	const infoArr = [
 		{
