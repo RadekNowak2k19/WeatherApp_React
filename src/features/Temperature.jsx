@@ -1,7 +1,10 @@
 import { InfoElement } from "./InfoElement";
 import styles from "./Temperature.module.scss";
-export const Temperature = ({ main }) => {
-	const { temp_max, temp_min, feels_like, temp } = main;
+import { useWeather } from "../context/WeatherContext";
+export const Temperature = () => {
+	const { currentWeatherMain } = useWeather();
+
+	const { temp_max, temp_min, feels_like, temp } = currentWeatherMain;
 	const tempArr = [
 		{
 			id: 0,

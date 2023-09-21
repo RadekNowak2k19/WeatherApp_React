@@ -1,6 +1,9 @@
 import { ForecastElement } from "./ForecastElement";
 import styles from "./Forecast.module.scss";
-export const Forecast = ({ forecastArr }) => {
+import { useWeather } from "../context/WeatherContext";
+export const Forecast = () => {
+	const { forecastArr } = useWeather();
+
 	if (!forecastArr) return;
 	else {
 		const newArr = [...forecastArr].slice(0, 10);
