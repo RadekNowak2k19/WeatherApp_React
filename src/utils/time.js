@@ -1,3 +1,4 @@
+// Display the present date.
 const options = {
 	weekday: "long",
 	year: "numeric",

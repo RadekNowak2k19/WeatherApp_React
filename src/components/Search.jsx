@@ -1,8 +1,9 @@
 import { searchIcon } from "../assets/images/index";
+import { ACTIONS } from "../utils/actions";
 export const Search = ({ dispatch, city, setCity }) => {
 	const handleSearchCity = () => {
 		if (!city) return;
-		dispatch({ type: "searchCity", payload: city });
+		dispatch({ type: ACTIONS.SEARCH_CITY, payload: city });
 	};
 	// dispatch({ type: "searchCity", payload: e.target.value }
 	return (
